@@ -1,0 +1,421 @@
+/* ortak kullanımlar */
+* {
+  /* box-sizing: border-box; */
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Sözde Değişkenler/Sınıflar */
+:root {
+  --main-color: orangered;
+  --secondary-color: orange;
+  --bg-color: rgba(238, 236, 236, 0.717);
+  --bg-secondary: purple;
+  --text-color: rgba(137, 135, 135, 0.989);
+  --color: white;
+}
+
+/* ana ekran */
+header {
+  background-color: var(--bg-color);
+  margin-top: 0px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+  align-items: center;
+}
+nav img {
+  width: 50px;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  /* margin-left: 500px; */
+  color: var(--text-color);
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.navbar a:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+.navbar li {
+  padding: 20px;
+}
+.navbar li:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.nav-btn {
+  margin-right: 40px;
+  padding: 5px;
+}
+.nav-btn button {
+  padding: 5px;
+  color: var(--color);
+  background-color: var(--main-color);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+.nav-btn button:hover {
+  cursor: pointer;
+  scale: 0.95;
+  transition: 0.3s;
+  background-color: var(--bg-secondary);
+}
+.home {
+  background: url(images/Car\ Website\ –\ 1@2x.png);
+  background-position: 50%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* align-items: center; */
+  padding: 10px;
+  position: relative;
+}
+.home-explanation {
+  padding: 10px;
+  margin-top: 100px;
+}
+.home-explanation h1 {
+  font-size: 50px;
+}
+span {
+  color: var(--main-color);
+}
+.home-explanation p {
+  padding: 10px;
+}
+.home-appstores {
+  display: flex;
+
+  padding: 10px;
+}
+.home-appstores img {
+  padding: 5px;
+}
+.home-appstores img {
+  width: 100px;
+}
+.home-form {
+  background-color: rgba(255, 255, 255, 0.699);
+  width: 500px;
+  padding: 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 150px;
+  left: 30px;
+}
+form input {
+  padding: 7px;
+  border-radius: 10px;
+  width: 100px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  background-color: var(--bg-color);
+}
+form {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.labels label {
+  padding-left: 10px;
+}
+.home-btn button {
+  padding: 6px;
+  font-size: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
+.home-btn button:hover {
+  background-color: var(--bg-secondary);
+  scale: 0.95;
+  transition: 0.3s;
+}
+
+/* kiralama adımları */
+.sections-top {
+  background-color: var(--bg-color);
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.sections-top h1 {
+  font-size: 15px;
+  color: var(--main-color);
+  padding: 5px;
+}
+.sections-top p {
+  font-size: 30px;
+}
+.work-steps {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 20px;
+  padding: 15px;
+  /* gap: 20px; */
+  text-align: center;
+}
+.choose-location {
+  text-align: center;
+}
+
+.choose-location i {
+  background-color: var(--bg-color);
+  padding: 5px;
+  border-radius: 50%;
+  color: var(--main-color);
+  font-size: 25px;
+}
+.choose-location i:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+  transition: 0.3s;
+}
+.choose-location h3 {
+  padding: 5px;
+}
+.choose-location p {
+  margin: 10px;
+}
+
+/* hizmetler */
+.sevices-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  margin-top: 20px;
+}
+.services-box {
+  margin: 5px;
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
+.services-box:hover {
+  cursor: pointer;
+  scale: 1.02;
+  transition: 0.3s;
+}
+.services-box img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.services-box-info p {
+  padding: 7px 10px;
+  border: 1px solid black;
+  width: 35px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.services-box-info h2 {
+  /* margin-bottom: 5px; */
+  font-size: 20px;
+}
+.services-box-info h1 {
+  background-color: rgb(224, 224, 224);
+  width: 230px;
+}
+.services-box-btn button {
+  width: 100%;
+  padding: 7px;
+  margin-top: 5px;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+}
+.services-box-btn button:hover {
+  cursor: pointer;
+  /* scale: 0.98; */
+  transition: 0.3s;
+  background-color: var(--main-color);
+}
+
+/* hakkımızda */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+  margin: 10px;
+}
+.about-container img {
+  width: 100%;
+}
+.about-container-info h1 {
+  font-size: 20px;
+  color: var(--main-color);
+  margin: 20px 0px;
+}
+.about-container-info p {
+  font-style: italic;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.about-container-btn button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--bg-secondary);
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  left: 630px;
+  bottom: 40px;
+}
+.about-container-btn button:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+  scale: 1.03;
+  transition: 0.3s;
+}
+
+/* yorumlar */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 20px;
+}
+.reviews-container-box {
+  box-shadow: 0 0 10px gray;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+}
+.reviews-container-box:hover {
+  cursor: pointer;
+  scale: 1.03;
+  transition: 0.3s;
+}
+.reviews-container-box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid orangered;
+}
+.reviews-container-box h1 {
+  padding: 10px;
+  font-size: 20px;
+  color: var(--main-color);
+}
+.reviews-container-box-i {
+  padding: 10px;
+  color: var(--secondary-color);
+}
+
+/* abonelik */
+.subscribe {
+  background: linear-gradient(orangered, orange);
+  height: 200px;
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe-container {
+  background-color: white;
+  width: 400px;
+  border-radius: 10px;
+  height: 100px;
+  padding: 10px;
+}
+.subscribe-container input {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 300px;
+  margin-top: 10px;
+  text-align: center;
+}
+.subscribe-container-btn button {
+  background-color: var(--bg-secondary);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  margin-bottom: 10px;
+  width: 330px;
+  font-size: 14px;
+}
+.subscribe-container-btn :hover {
+  background-color: var(--main-color);
+  scale: 0.98;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.copyright {
+  background-color: red;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.copyright-text {
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+@media (max-width: 550px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-form form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+  }
+}
