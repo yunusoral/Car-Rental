@@ -9,7 +9,7 @@ Bu çalışmamızda günlük hayatta sıkça kullandığımız araç kiralama i�
 
 -Renk geçişleri hoover efektleri ile desteklendi
 
-#EKRAN KAYDI
+# EKRAN KAYDI
 
 ![araç kiralama](https://github.com/user-attachments/assets/9ffedb75-5c65-4dfb-b972-185130cdba9c)
 
